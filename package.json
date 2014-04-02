@@ -1,0 +1,17 @@
+{
+  "name": "comicManagerApi",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "log4js":"*",
+    "request":"*",
+    "config":"*",
+    "mongodb":"*",
+    "mongoose":"*",
+    "dateformat":"*",
+    "restify":"*"
+  }
+}
