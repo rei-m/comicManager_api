@@ -11,13 +11,13 @@ var restify = require('restify'),
     SalesInfo = require('model/salesInfo').getModel(mongoose);
 
 // レスポンスロジック処理作成
-var respondMasterInfo = require('comicMaster/respondInfo')(Comic),
-    respondSalesInfo = require('comicSales/respondInfo')(SalesInfo);
+var getMasterInfo = require('comicMaster/get')(Comic),
+    getSalesInfo = require('comicSales/get')(SalesInfo);
 
 // サーバーを作成しルーティングを設定
 var server = restify.createServer();
-server.get('/comic/master', respondMasterInfo);
-server.get('/comic/sales', respondSalesInfo);
+server.get('/comic/master', getMasterInfo);
+server.get('/comic/sales', getSalesInfo);
 
 // listen開始
 server.listen(8080, function() {
